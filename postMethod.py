@@ -21,11 +21,14 @@ def query_record():
             if not verify:
                 connection.close()
                 return "Succesful sending data"
+            
             else:
                 connection.close()
                 return "Failure sending data"
+        
         except Exception as e:
             connection.close()
+        
         return "Failure while sending data"
 
     return render_template("postform.html")
